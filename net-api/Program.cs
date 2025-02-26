@@ -3,7 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:4200") // Angular's default port
+        builder => builder.WithOrigins("*")
                           .AllowAnyMethod()
                           .AllowAnyHeader());
 });
